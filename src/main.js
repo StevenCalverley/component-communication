@@ -1,9 +1,10 @@
 import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .mount("#app");
+import App from "./App.vue";
+import FriendContact from "./components/FriendContact.vue";
+
+const app = createApp(App);
+
+app.component("friend-contact", FriendContact);
+
+app.mount("#app");
