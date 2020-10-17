@@ -7,6 +7,7 @@
     <button @click="toggleDetails">
       {{ detailsAreVisible ? 'Hide' : 'Show' }} Details
     </button>
+    <button @click="$emit('delete', id)">Delete</button>
     <ul v-if="detailsAreVisible">
       <li>
         <strong>Phone:</strong>
@@ -44,7 +45,7 @@ export default {
       default: false,
     },
   },
-  emits: ['toggle-favorite'],
+  emits: ['toggle-favorite', 'delete'],
   data() {
     return {
       detailsAreVisible: false,
