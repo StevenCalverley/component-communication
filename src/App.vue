@@ -24,28 +24,28 @@ export default {
     return {
       friends: [
         {
-          id: "manuel",
-          name: "Manuel Lorenz",
-          phone: "0123 45678 90",
-          email: "manuel@localhost.com",
-          isFavorite: true
+          id: 'manuel',
+          name: 'Manuel Lorenz',
+          phone: '0123 45678 90',
+          email: 'manuel@localhost.com',
+          isFavorite: true,
         },
         {
-          id: "julie",
-          name: "Julie Jones",
-          phone: "0987 654421 21",
-          email: "julie@localhost.com",
-          isFavorite: false
-        }
-      ]
+          id: 'julie',
+          name: 'Julie Jones',
+          phone: '0987 654421 21',
+          email: 'julie@localhost.com',
+          isFavorite: false,
+        },
+      ],
     };
   },
   methods: {
     toggleFavoriteHandler(id) {
       const identifiedFriend = this.friends.find(friend => friend.id === id);
       identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -54,7 +54,7 @@ export default {
   box-sizing: border-box;
 }
 html {
-  font-family: "Jost", sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 body {
   margin: 0;
@@ -98,6 +98,7 @@ header {
   color: white;
   padding: 0.05rem 1rem;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+  outline: none;
 }
 #app button:hover,
 #app button:active {
